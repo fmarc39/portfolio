@@ -509,6 +509,16 @@ p {
 
   }
 
+  html {
+
+    font-size: 0.6em;
+  }
+
+  #description {
+
+    height: 35rem;
+  }
+
 
   .projects {
 
@@ -526,7 +536,7 @@ p {
 
 #avatar-img {
 
-    width: 6.5rem;
+    width: 8em;
     height: auto;
 
 }

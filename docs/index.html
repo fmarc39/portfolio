@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="img/f.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>François Marc | Web Dev</title>
+</head>
+
+<body>
+    <header id="header">
+
+        <div id="navbar">
+            <div class="navbar-elts">
+                <a><img src="../img/f.png" alt="logo" class="navbar-logo"> </a>
+            </div>
+            <div class="navbar-elts">
+                <a href="" class="navbar-elt" id="projets-p">Projets</a>
+                <a href="" class="navbar-elt">Competences</a>
+                <a href=""> <button class="header-btn">Contact</button> </a>
+                <a href="javascript:void(0);" class="icon hiden" onclick="responsive()">
+                    <i class="fa fa-bars"></i> </a>
+            </div>
+        </div>
+        <div id="presentation">
+            <h1 class="reveal-1"><strong>Développeur Full-Stack JS</strong></h1>
+            <p class="reveal-2 presentation__p">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <img src="../img/avatar france.png" alt="image de l'avatar" id="avatar-img" class="reveal-3">
+        </div>
+        <div id="header-footer">
+            <img src="../img/hero.svg" alt="Illustrations" id="footer-img">
+        </div>
+    </header>
+
+    <section id="description">
+        <h2 id="h2">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio in nulla itaque accusantium excepturi iusto minima nihil hic fugit repudiandae tempore, impedit, veniam voluptate, eaque suscipit sunt quibusdam at.</p>
+    </section>
+
+    <section id="competences">
+        <div class="container reveal-0" id="container-1">
+            <img src="../img/storing.png" alt="logo" class="server-img">
+            <h3 class="reveal-2">Front-end Dev</h3>
+            <p class="reveal-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti, ducimus fuga aspernatur totam dignissimos earum vitae quia rerum perspiciatis, voluptatem illo perferendis iure. Eos iure qui ut obcaecati natus.</p>
+            <h4 class="reveal-2">Langage maitrisé</h4>
+            <p class="reveal-2">HTML CSS ...</p>
+            <H4 class="reveal-2">Dev Tools</H4>
+        </div>
+        <div class="container reveal-1" id="container-2">
+            <img src="../img/tools-and-utensils.png" alt="logo" class="server-img">
+            <h3 class="reveal-2">Front-end Dev</h3>
+            <p class="reveal-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi corrupti, ducimus fuga aspernatur totam dignissimos earum vitae quia rerum perspiciatis, voluptatem illo perferendis iure. Eos iure qui ut obcaecati natus.</p>
+            <h4 class="reveal-2">Langage maitrisé</h4>
+            <p class="reveal-3">HTML CSS ...</p>
+            <H4 class="reveal-2">Dev Tools</H4>
+            <p class="reveal-3">1</p>
+        </div>
+    </section>
+
+    <main id="projects">
+        <div>
+            <h3>Mes Projets</h3>
+            <p class="projects__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo officiis nisi libero odit, iusto quae, expedita doloremque consectetur et natus?</p>
+        </div>
+        <div id="container-projects">
+            <div class="projects reveal-1" id="project-1">
+                <img src="../img/restaurant.jpg" alt="" id="img1" class="img">
+                <div class="overlay" id="overlay-1">
+                    <p>Restaurant</p>
+                </div>
+                <div class="overlay-1 hiden reveal-1" id="overlay-1-1" onmouseleave='mouseleave1()'>
+                    <p class="reveal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsa nobis dolor quasi perspiciatis</p>
+                    <button id="project-btn">Contact</button>
+                </div>
+            </div>
+            <div class="projects reveal-1" id="project-2">
+                <img src="../img/virus.jpg" alt="" id="img2" class="img">
+                <div class="overlay" id="overlay-2">
+                <p>Covid Tracker</p>
+                </div>
+                <div class="overlay-1 hiden reveal-1" id="overlay-2-2" onmouseleave='mouseleave2()'>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsa nobis dolor quasi perspiciatis</p>
+                    <button id="project-btn">Contact</button>
+                </div>
+            </div>
+            <div class="projects reveal-1 id="project-3">
+                <img src="../img/saving.jfif" alt="" id="img2" class="img">
+                <div class="overlay" id="overlay-3">
+                <p>Budget App</p>
+                </div>
+                <div class="overlay-1 hiden reveal-1" id="overlay-3-3" onmouseleave='mouseleave3()'>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsa nobis dolor quasi perspiciatis</p>
+                    <button id="project-btn">Contact</button>
+                </div>
+            </div>  
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <img src="../img/f.png" alt="" class="footer-logo">
+        <h5 class="footer-slogan">Lorem ipsum dolor, sit amet consectetur adipisicin</h5>
+        <div id="social-box">
+            <ul id="reseaux">
+                <li><img src="../img/twitter.png" alt="" class="social-img"></li>
+                <li><img src="../img/spotify.png" alt="" class="social-img"></li>
+                <li><img src="../img/github.png" alt="" class="social-img"></li>
+                <li><img src="../img/linkedin.png" alt="" class="social-img" id="last-img"></li>
+            </ul>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+        <p>Illustrations @N.Vincent</p>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
