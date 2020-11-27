@@ -1,7 +1,27 @@
 /* CREATION DES VARIABLES SASS */
 
 
+/* COLORS */
+
 $mainColor: #0052B4;
+
+/* MARGIN */
+
+$litleMarginBottom: 1.5rem;
+$mediumMarginBottom: 2.5rem;
+$largeMarginBottom: 3.5rem;
+
+/* FONT SIZE */
+
+$H1: 3.5rem;
+$H2: 3rem;
+$H3: 2.5rem;
+$H4: 2rem;
+$H5: 1.5rem;
+$largeP: 1.5rem;
+$normalP: 1.3rem;
+$smallp: 1.1rem;
+
 
 /* SCROLL BAR */
 
@@ -27,7 +47,7 @@ body {
 
 .header {
 
-    font-size: 1.2rem;
+    font-size: $smallp;
     margin-top: 2.5rem;
     height: auto;
     display: flex;
@@ -37,8 +57,8 @@ body {
 
 .presentation__main-title {
 
-    font-size: 3.5rem;
-    margin-bottom: 2.5rem;
+    font-size: $H1;
+    margin-bottom: $mediumMarginBottom;
     font-weight: bold;
     line-height: 1.5;
 }
@@ -65,8 +85,8 @@ body {
 
 .presentation__p {
 
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
+    font-size: $largeP;
+    margin-bottom: $mediumMarginBottom;
     
 }
 
@@ -80,7 +100,6 @@ body {
 .navbar__elt {
 
     text-decoration: none;
-    font-size: 1.2rem;
     margin-right: 1.5rem;
     font-weight: normal;
     cursor: pointer;
@@ -94,7 +113,6 @@ body {
 
 .navbar__elts-box {
 
-   
     display: flex;
     justify-content: space-around;
     align-items: center;  
@@ -108,7 +126,7 @@ body {
     border-radius: 30px;
     border: solid rgb(17, 11, 180) 2px;
     color: rgb(17, 11, 180);
-    font-size: 1.3rem;
+    font-size: $smallp;
     height: 50px;
     width: 130px;
     transition: all 0.4s ease;
@@ -127,7 +145,7 @@ body {
     border-radius: 30px;
     border: solid white 2px;
     color: white;
-    font-size: 1rem;
+    font-size: $smallp;
     height: 50px;
     width: 130px;
     transition: all 0.5s;
@@ -159,7 +177,7 @@ body {
 
     width: 4em;
     height: auto;
-    margin-bottom: 2.5rem;
+    margin-bottom: $mediumMarginBottom;
 }
 
 #header-footer {
@@ -182,9 +200,9 @@ body {
 
 .description__title {
 
-    font-size: 3rem;
+    font-size: $H2;
     font-weight: bold;
-    margin-bottom: 3rem;
+    margin-bottom: $mediumMarginBottom;
 }
 
 #description {
@@ -202,10 +220,10 @@ body {
     text-align: center;
 }
 
-.description-p {
+.description__p {
 
     text-align: center;
-    font-size: 1.3rem;
+    font-size: $normalP;
     display: block;
     line-height: 1.7rem;
     margin: 0 2.5rem;
@@ -222,16 +240,16 @@ body {
     position: relative;
     flex-wrap: wrap;
     top: -7rem;
-    margin-bottom: 2rem;
+    margin-bottom: $litleMarginBottom;
 }
 
 
 .container__title {
 
-    border-bottom: #0051b455 solid 1px;
-    font-size: 2.5rem;
+    border-bottom: $mainColor solid 1px;
+    font-size: $H3;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: $litleMarginBottom;
     padding-bottom: 2rem;
 }
 
@@ -239,7 +257,7 @@ body {
     width: 8em;
     height: auto;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: $mediumMarginBottom;
 }
 
 .container {
@@ -261,7 +279,7 @@ body {
 .container__content {
 
     font-size: 1.3rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: $largeMarginBottom;
     display: inline-block;
     line-height: 1.5em;
 }
@@ -269,14 +287,14 @@ body {
 .container-subtitle {
 
     font-size: 2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: $mediumMarginBottom;
     font-weight: 700;
     color: $mainColor;
 }
 
 #container-1 {
 
-    margin-bottom: 1rem;
+    margin-bottom: $litleMarginBottom;
     max-width: 95%;
 }
 
@@ -302,7 +320,7 @@ body {
 
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 2.5rem;
+    margin-bottom: $mediumMarginBottom;
 
 
 }
@@ -328,7 +346,7 @@ body {
     height: 300px;
     width: 350px;
     margin-top: 1rem;
-    margin-right: 20px;
+    margin-right: $litleMarginBottom;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -434,7 +452,7 @@ body {
 [class*="reveal-"] {
     
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(150px);
     max-width: 100%;
 }
 
@@ -484,13 +502,13 @@ body {
 
 #footer * {
 
-    margin-bottom: 2rem;
+    margin-bottom: $mediumMarginBottom;
     text-align: center;
 }
 
 #footer p {
 
-    margin-bottom: 1rem;
+    margin-bottom: $litleMarginBottom;
 }
 
 #reseaux {
@@ -541,7 +559,7 @@ body {
 
         font-size: 2.0rem;
         font-weight: bold;
-        margin-bottom: 2rem;
+        margin-bottom: $mediumMarginBottom;
     }
 
     #description {
