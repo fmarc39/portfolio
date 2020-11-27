@@ -50,11 +50,6 @@ body {
     height: 3em;
 }
 
-.icon:hover {
-
-    transform: rotate(90deg);
-    transition: 0.5s;
-}
 
 .footer-logo {
 
@@ -567,5 +562,26 @@ body {
     .social-img {
 
         height: 2.5rem;
+    }
+
+    .navbar__elt, .header-btn {
+        display: none;
+    }
+
+    .hiden {
+
+        float: right;
+        display: block;
+        margin-right: 2rem;
+    }
+
+    .header__navbar {
+
+        justify-content: space-between;
+    }
+
+    .navbar__logo {
+
+        margin-left: 1rem;
     }
 }
