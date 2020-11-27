@@ -547,7 +547,7 @@ body {
 /* RESPONSIVE */
 @media screen and (max-width: 800px) {
   .presentation__main-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .presentation__p {
     font-size: 1.5rem;
