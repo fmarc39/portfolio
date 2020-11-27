@@ -643,6 +643,30 @@ body {
 
     }
 
+    #navbar {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        font-size: $largeP;
+        margin-bottom: 1.5rem;
+    }
+
+    #navbar > li {
+
+        margin-bottom: 1rem;
+
+
+    }
+
+    .header__navbar {
+
+        box-shadow: 0 5px 5px rgba(221, 221, 221, 0.37);
+        display: flex;
+        justify-content: center;
+    }
     
     
   }
