@@ -16,7 +16,7 @@
 
 /* Style des titres et p */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Header */
@@ -279,8 +279,9 @@ body {
 .container-subtitle {
   font-size: 2rem;
   margin-bottom: 2.5rem;
-  font-weight: 700;
+  font-weight: bold;
   color: #0052B4;
+  font-style: italic;
 }
 
 #container-1 {

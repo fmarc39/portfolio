@@ -39,7 +39,8 @@ $smallp: 1.1rem;
 /* Style des titres et p */
 
 body {
-    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
 
 }
     
@@ -288,8 +289,9 @@ body {
 
     font-size: 2rem;
     margin-bottom: $mediumMarginBottom;
-    font-weight: 700;
+    font-weight: bold;
     color: $mainColor;
+    font-style: italic;
 }
 
 #container-1 {
