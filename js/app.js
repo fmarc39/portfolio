@@ -57,7 +57,7 @@ function mouseleave3() {
 
 // CREATION DE LA SECTION QUI VA PERMETTRE D'OBERSVER LA SCROLL DE LA PAGE ET DE FAIRE APPARAITRE LES EFFETS 
 
-const ratio = 0
+const ratio = 0.1
 
 const options = {
 
@@ -90,10 +90,12 @@ const options = {
 
   function responsive() {
 
+    console.log("swal")
+
     var x = document.getElementById("navbar");
-    if (x.className === "navbar") {
+    if (x.className === "navbar__elts-box") {
       x.className += " responsive";
     } else {
-      x.className = "navbar";
+      x.className = "navbar__elts-box";
     } 
   }

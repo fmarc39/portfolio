@@ -432,6 +432,14 @@ body {
     display: none;
 }
 
+.hiden-nav {
+
+    display: none;
+    position: absolute;
+    top: calc(3.5rem);
+    right: $litleMarginBottom;
+}
+
 
 #overlay-1 {
 
@@ -592,32 +600,50 @@ body {
 
         height: 2.5rem;
     }
-
-    .navbar__elt, .header-btn {
-        display: none;
-    }
-
-    .hiden {
-
-        float: right;
-        display: block;
-        margin-right: 2rem;
-    }
-
-    .header__navbar {
-
-        justify-content: space-between;
-    }
-
-    .navbar__logo {
-
-        margin-left: 1rem;
-    }
-
+    
+    
     #description {
 
         justify-content: flex-start;
         padding: 4rem 2rem 11rem 2rem;
         height: auto;
     }
-}
+
+
+    .navbar__elts-box li:not(:first-child) {
+        
+        display: none;
+    
+    }
+
+    .hiden-nav {
+
+        display: block;
+    }
+
+    .navbar__elts-box.responsive li {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar__elts-box.responsive:not(:first-child) {
+
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .navbar__logo {
+
+        position: absolute;
+        top:2.5rem;
+        left: $litleMarginBottom;
+
+
+    }
+
+    
+    
+  }
+
