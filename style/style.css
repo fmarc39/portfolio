@@ -272,6 +272,12 @@ body {
 #container-1 {
 
     margin-bottom: 1rem;
+    max-width: 95%;
+}
+
+#container-2 {
+
+    max-width: 95%;
 }
 
 
