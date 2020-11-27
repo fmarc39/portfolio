@@ -618,6 +618,9 @@ body {
     top: 2.5rem;
     left: 1.5rem;
   }
+  .navbar__elt {
+    margin-right: 0;
+  }
   #navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -638,6 +641,7 @@ body {
   }
   #navbar > li {
     margin-bottom: 1rem;
+    margin-right: 0;
   }
   .header__navbar {
     -webkit-box-shadow: 0 5px 5px rgba(221, 221, 221, 0.37);

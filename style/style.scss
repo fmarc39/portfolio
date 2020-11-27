@@ -116,7 +116,7 @@ body {
 
     display: flex;
     justify-content: space-around;
-    align-items: center;  
+    align-items: center;
 }
 
 /* BTN */
@@ -643,6 +643,11 @@ body {
 
     }
 
+    .navbar__elt {
+
+        margin-right: 0;
+    }
+
     #navbar {
 
         display: flex;
@@ -657,6 +662,7 @@ body {
     #navbar > li {
 
         margin-bottom: 1rem;
+        margin-right: 0;
 
 
     }
