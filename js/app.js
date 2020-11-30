@@ -90,8 +90,6 @@ const options = {
 
   function responsive() {
 
-    console.log("swal")
-
     var x = document.getElementById("navbar");
     if (x.className === "navbar__elts-box") {
       x.className += " responsive";
