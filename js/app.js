@@ -8,32 +8,21 @@ const overlay3 = document.getElementById("overlay-3")
 
 const overlay11 = document.getElementById("overlay-1-1")
 const overlay22 = document.getElementById("overlay-2-2")
-const overlay33 = document.getElementById("overlay-3-3")
-
-
-// CREATION DE LA VARIABLE RATION D'AFFICHAGE 
+const overlay33 = document.getElementById("overlay-3-3") 
 
 projectElts.addEventListener("mouseover", function (event) {
-
   let targetElt = event.target
 
   if(targetElt.id == "overlay-1") {
-
-    overlay11.classList.remove('hiden')
-  
+    overlay11.classList.remove('hiden') 
   }
 
   if(targetElt.id == "overlay-2") {
-
     overlay22.classList.remove('hiden')
-
   }
 
   if(targetElt.id == "overlay-3") {
-
-  
-    overlay33.classList.remove('hiden')
-    
+    overlay33.classList.remove('hiden')    
   }
 })
 
@@ -46,7 +35,6 @@ function mouseleave1() {
 function mouseleave2() {
 
   overlay22.classList.add('hiden')
- 
 }
 
 function mouseleave3() {
@@ -60,21 +48,19 @@ function mouseleave3() {
 const ratio = 0.1
 
 const options = {
-
     root: null,
     rootMargin: '0px',
     threshold: ratio
   }
-  
-  var callback = function(entries, observer) { 
-    entries.forEach(entry => {
 
-        if (entry.intersectionRatio > ratio) {
+var callback = function(entries, observer) { 
+  entries.forEach(entry => {
 
-            entry.target.classList.add('reveal-visible')
-              
-        }
-    })
+      if (entry.intersectionRatio > ratio) {
+          entry.target.classList.add('reveal-visible')
+            
+      }
+  })
 
   }
   var observer = new IntersectionObserver(callback, options);
@@ -84,7 +70,6 @@ const options = {
   })
 
   observer.observe(target);
-
 
   // RESPONSIVE MENU
 
