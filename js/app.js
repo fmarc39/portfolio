@@ -86,3 +86,30 @@ var callback = function(entries, observer) {
       x.className = "navbar__elts-box";
     } 
   }
+
+  // Import de Particles.js
+
+var message = "Développeur Full-Stack JS";
+var msgCount = 0;
+var timer1, timer2;
+var messageLabel = document.getElementById("messageLabel");
+
+function textFunc() {
+   messageLabel.innerHTML = message.substring(0, msgCount);
+   
+   if (msgCount == message.length) {
+      // Stop Timer
+      clearInterval(timer1);
+      
+      // Start blinking animation!
+      timer2 = setInterval("blinkFunc()", 200);
+      
+   } else {
+      msgCount++;
+   }
+}
+
+
+
+
+timer1 = setInterval("textFunc()", 100);

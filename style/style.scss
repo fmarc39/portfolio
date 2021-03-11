@@ -1,5 +1,6 @@
 /* CREATION DES VARIABLES SASS */
 
+
   /* COLORS */
 
 $mainColor: #0052B4;
@@ -53,7 +54,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: calc(100vh - 2.5rem);
 }
 
 .presentation__main-title {
@@ -62,7 +62,10 @@ body {
     margin-bottom: $mediumMarginBottom;
     font-weight: bold;
     line-height: 1.5;
+    color: $mainColor;
+    text-shadow: 0px 11px 10px rgba(184, 184, 184, 0.418);
 }
+    
 
 .icon {
 
@@ -78,8 +81,11 @@ body {
 
 .footer-logo {
 
-    height: 2.5rem;
-    width: auto;   
+    height: 3.5rem;
+    width: auto;
+    background-color:white;
+    border-radius: 50%;
+    padding: 0.6rem
 }
 
 .presentation__p {
@@ -88,6 +94,7 @@ body {
     margin-bottom: $mediumMarginBottom;
     
 }
+
 
 .header__navbar {
 
@@ -187,8 +194,7 @@ a.navbar__elt:before {
 
 #avatar-img {
 
-    width: 4em;
-    height: auto;
+    height: 8em;
     margin-bottom: $mediumMarginBottom;
 }
 
@@ -687,7 +693,4 @@ a.navbar__elt:before {
         display: flex;
         justify-content: center;
     }
-    
-    
   }
-
