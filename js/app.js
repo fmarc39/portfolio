@@ -69,7 +69,11 @@ var callback = function(entries, observer) {
     observer.observe(r)
   })
 
-  observer.observe(target);
+  try {
+    observer.observe(target);
+  } catch (error) {
+    (error)
+  };
 
   // RESPONSIVE MENU
 
