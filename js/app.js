@@ -1,3 +1,4 @@
+
 // CREATION DE LA PARTIE QUI VA AFFICHER L'OVERLAY SECONDAIRE AU MOMENT DU HOVER
 
 const projectElts = document.getElementById("container-projects")
@@ -98,18 +99,45 @@ function textFunc() {
    messageLabel.innerHTML = message.substring(0, msgCount);
    
    if (msgCount == message.length) {
-      // Stop Timer
+
       clearInterval(timer1);
-      
-      // Start blinking animation!
-      timer2 = setInterval("blinkFunc()", 200);
       
    } else {
       msgCount++;
    }
 }
-
-
-
-
 timer1 = setInterval("textFunc()", 100);
+
+
+// Mouse animation LA
+
+// create instance of kinet with custom settings
+var kinet = new Kinet({
+  acceleration: 0.06,
+  friction: 0.20,
+  names: ["x", "y"],
+});
+
+// select circle element
+var circle = document.getElementById('circle');
+
+// set handler on kinet tick event
+kinet.on('tick', function(instances) {
+  circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
+});
+
+// call kinet animate method on mousemove
+document.addEventListener('mousemove', function (event) {
+  kinet.animate('x', event.clientX - window.innerWidth/2);
+  kinet.animate('y', event.clientY - window.innerHeight/2);
+});
+
+
+// log
+kinet.on('start', function() {
+  console.log('start');
+});
+
+kinet.on('end', function() {
+  console.log('end');
+});
