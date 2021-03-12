@@ -70,12 +70,16 @@ body {
 
     font-size: 1.5rem ;
     transition: all 0.5s;
-    color: black;
+    color: white;
 }
 
 .navbar__logo {
 
-    height: 3em;
+    height: 3.5rem;
+    width: auto;
+    background-color:white;
+    border-radius: 50%;
+    padding: 0.6rem
 }
 
 .footer-logo {
@@ -119,7 +123,7 @@ a.navbar__elt:before {
     bottom: -5px;
     left: 0;
     border-radius: 5px;
-    background-color: $mainColor;
+    background-color: white;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
   }
@@ -142,7 +146,7 @@ a.navbar__elt:before {
 
     background-color: white;
     border-radius: 30px;
-    border: solid $mainColor 2px;
+    border: none;
     color: $mainColor;
     font-size: $smallp;
     height: 50px;
@@ -193,7 +197,7 @@ a.navbar__elt:before {
 
 #avatar-img {
 
-    height: 8em;
+    height: 8.5em;
     margin-bottom: $mediumMarginBottom;
 }
 
@@ -682,16 +686,14 @@ a.navbar__elt:before {
 
         margin-bottom: 1rem;
         margin-right: 0;
-
-
     }
 
     .header__navbar {
 
-        box-shadow: 0 5px 5px rgba(221, 221, 221, 0.37);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.35);
         display: flex;
         justify-content: center;
-    }
+     
   }
 
 
