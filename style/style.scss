@@ -51,10 +51,7 @@ body {
     font-size: $smallp;
     margin-top: 2.5rem;
     height: 100vh;
-    display: flex;
     color: white;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 .presentation__main-title {
@@ -103,7 +100,8 @@ body {
 
     display: flex;
     justify-content: space-around;
-    align-items: center;  
+    align-items: center;
+    margin-bottom: 10em;
 }
 
 .navbar__elt {
@@ -126,12 +124,12 @@ a.navbar__elt:before {
     background-color: white;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
-  }
+    }
 
-  a.navbar__elt:hover:before {
+a.navbar__elt:hover:before {
     visibility: visible;
     width: 100%;
-  }
+}
 
 .navbar__elts-box {
 
@@ -282,17 +280,16 @@ a.navbar__elt:before {
 
 .container {
 
-   width: 450px;
-   max-width: 95%;
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-   align-items: center;
-   border-radius: 10px;
-   padding: 1.5rem;
-   background-color: #e6e6e6;
-   box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-   
+width: 450px;
+max-width: 95%;
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+border-radius: 10px;
+padding: 1.5rem;
+background-color: #e6e6e6;
+box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
 }
 
@@ -693,9 +690,8 @@ a.navbar__elt:before {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.35);
         display: flex;
         justify-content: center;
-     
-  }
-
+}
+}
 
 // Wavy bg
 
@@ -752,10 +748,10 @@ a.navbar__elt:before {
     background-size: 50% 100px;
 }
 .waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
 .waveMiddle {
     background-size: 50% 120px;
@@ -765,5 +761,6 @@ a.navbar__elt:before {
 }
 
 .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
+    animation: move_wave 15s linear infinite
+
 }
