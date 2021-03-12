@@ -11,7 +11,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #251c81;
-  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  background-image: linear-gradient(315deg, #0052B4 0%, #016DF0 74%);
 }
 
 /* Style des titres et p */
@@ -78,7 +78,7 @@ body {
 
 .navbar__elt {
   text-decoration: none;
-  margin-right: 1.5rem;
+  margin-right: 2rem;
   font-weight: normal;
   cursor: pointer;
   position: relative;
@@ -175,6 +175,8 @@ a.navbar__elt:hover:before {
 #avatar-img {
   height: 8.5em;
   margin-bottom: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 #header-footer {
@@ -279,7 +281,7 @@ a.navbar__elt:hover:before {
           align-items: center;
   border-radius: 10px;
   padding: 1.5rem;
-  background-color: #e6e6e6;
+  background-color: white;
   -webkit-box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
           box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -433,9 +435,10 @@ a.navbar__elt:hover:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: wheat;
+  color: white;
   background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#0052b4), to(#016df0));
+  background-image: linear-gradient(to right, #0052b4 0%, #016df0 100%);
 }
 
 .overlay-1 p {
@@ -486,13 +489,13 @@ a.navbar__elt:hover:before {
 }
 
 .reveal-2 {
-  -webkit-transition-delay: .15s;
-          transition-delay: .15s;
+  -webkit-transition-delay: 1.15s;
+          transition-delay: 1.15s;
 }
 
 .reveal-3 {
-  -webkit-transition-delay: .30s;
-          transition-delay: .30s;
+  -webkit-transition-delay: 1.30s;
+          transition-delay: 1.30s;
 }
 
 /* FOOTER */
@@ -722,7 +725,7 @@ a.navbar__elt:hover:before {
   width: 100%;
   overflow: hidden;
   height: 100%;
-  bottom: -1px;
+  bottom: 0px;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #94C7EF), color-stop(80%, #016DF0));
   background-image: linear-gradient(to top, #94C7EF 20%, #016DF0 80%);
 }

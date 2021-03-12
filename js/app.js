@@ -1,12 +1,9 @@
-
 // CREATION DE LA PARTIE QUI VA AFFICHER L'OVERLAY SECONDAIRE AU MOMENT DU HOVER
 
 const projectElts = document.getElementById("container-projects")
-
 const overlay1 = document.getElementById("overlay-1")
 const overlay2 = document.getElementById("overlay-2")
 const overlay3 = document.getElementById("overlay-3")
-
 const overlay11 = document.getElementById("overlay-1-1")
 const overlay22 = document.getElementById("overlay-2-2")
 const overlay33 = document.getElementById("overlay-3-3") 
@@ -29,8 +26,7 @@ projectElts.addEventListener("mouseover", function (event) {
 
 function mouseleave1() {
 
-  overlay11.classList.add('hiden')
-  
+  overlay11.classList.add('hiden') 
 }
 
 function mouseleave2() {
@@ -41,13 +37,11 @@ function mouseleave2() {
 function mouseleave3() {
 
   overlay33.classList.add('hiden')
-
 }
 
 // CREATION DE LA SECTION QUI VA PERMETTRE D'OBERSVER LA SCROLL DE LA PAGE ET DE FAIRE APPARAITRE LES EFFETS 
 
 const ratio = 0.1
-
 const options = {
     root: null,
     rootMargin: '0px',
@@ -58,10 +52,10 @@ var callback = function(entries, observer) {
   entries.forEach(entry => {
 
       if (entry.intersectionRatio > ratio) {
-          entry.target.classList.add('reveal-visible')
-            
+          entry.target.classList.add('reveal-visible')          
       }
-  })
+  }
+)
 
   }
   var observer = new IntersectionObserver(callback, options);
@@ -76,68 +70,30 @@ var callback = function(entries, observer) {
     (error)
   };
 
-  // RESPONSIVE MENU
+  // responsivemenu
 
   function responsive() {
 
-    var x = document.getElementById("navbar");
-    if (x.className === "navbar__elts-box") {
-      x.className += " responsive";
+    var navBar = document.getElementById("navbar");
+    if (navBar.className === "navbar__elts-box") {
+      navBar.className += " responsive";
     } else {
-      x.className = "navbar__elts-box";
+      navBar.className = "navbar__elts-box";
     } 
   }
-
-  // Import de Particles.js
+// Animated main title letres 
 
 var message = "Développeur Full-Stack JS";
 var msgCount = 0;
-var timer1, timer2;
+var timer1;
 var messageLabel = document.getElementById("messageLabel");
 
 function textFunc() {
-   messageLabel.innerHTML = message.substring(0, msgCount);
-   
-   if (msgCount == message.length) {
-
-      clearInterval(timer1);
-      
-   } else {
+  messageLabel.innerHTML = message.substring(0, msgCount);
+  if (msgCount == message.length) {
+    clearInterval(timer1);   
+  } else {
       msgCount++;
-   }
+  }
 }
 timer1 = setInterval("textFunc()", 100);
-
-
-// Mouse animation LA
-
-// create instance of kinet with custom settings
-var kinet = new Kinet({
-  acceleration: 0.06,
-  friction: 0.20,
-  names: ["x", "y"],
-});
-
-// select circle element
-var circle = document.getElementById('circle');
-
-// set handler on kinet tick event
-kinet.on('tick', function(instances) {
-  circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
-});
-
-// call kinet animate method on mousemove
-document.addEventListener('mousemove', function (event) {
-  kinet.animate('x', event.clientX - window.innerWidth/2);
-  kinet.animate('y', event.clientY - window.innerHeight/2);
-});
-
-
-// log
-kinet.on('start', function() {
-  console.log('start');
-});
-
-kinet.on('end', function() {
-  console.log('end');
-});
