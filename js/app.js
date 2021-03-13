@@ -74,11 +74,14 @@ var callback = function(entries, observer) {
 
   function responsive() {
 
+    var header__navbar = document.querySelector('.header__navbar')
     var navBar = document.getElementById("navbar");
     if (navBar.className === "navbar__elts-box") {
       navBar.className += " responsive";
+      header__navbar.className += " clicked"
     } else {
       navBar.className = "navbar__elts-box";
+      header__navbar.className = "header__navbar"
     } 
   }
 // Animated main title letres 

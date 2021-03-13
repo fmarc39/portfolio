@@ -95,9 +95,17 @@ body {
 .header__navbar {
 
     display: flex;
+    height: 100px;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 10em;
+    transition: s height ease-in-out;
+
+}
+
+.header__navbar.clicked {
+
+    height: 200px;
 }
 
 .navbar__elt {
@@ -658,7 +666,7 @@ box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px
     .navbar__elts-box li:not(:first-child) {
         
         display: none;
-    
+
     }
 
     .hiden-nav {
@@ -716,6 +724,7 @@ box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px
         display: flex;
         justify-content: center;
         margin-bottom: 5em;
+        transition: height 0.4s ease-in-out
 }
 }
 
