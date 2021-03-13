@@ -143,7 +143,6 @@ a.navbar__elt:hover:before {
 .header-btn {
     background-color: white;
     border-radius: 30px;
-    border: none;
     color: $mainColor;
     font-size: $smallp;
     height: 50px;
@@ -160,6 +159,7 @@ a.navbar__elt:hover:before {
         left: 0;
         width: 100%;
         height: 100%;
+        border: solid 2px white;
         background-color: $mainColor;
         border-radius: 30px;
         z-index: -2;
