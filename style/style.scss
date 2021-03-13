@@ -138,8 +138,9 @@ a.navbar__elt:hover:before {
 
 /* BTN */
 
-.header-btn {
+// Header Btn
 
+.header-btn {
     background-color: white;
     border-radius: 30px;
     border: none;
@@ -147,15 +148,42 @@ a.navbar__elt:hover:before {
     font-size: $smallp;
     height: 50px;
     width: 130px;
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-
-.header-btn:hover {
-
-    background-color: $mainColor;
     color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $mainColor;
+        border-radius: 30px;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $thirdColor;
+        transition: all .3s;
+        border-radius: 30px;
+        z-index: -1;
+    }
+    &:hover {
+        color: $mainColor;
+        &:before {
+        width: 100%;
+    }
 }
+    }
+
 
 #project-btn {
 
@@ -264,7 +292,8 @@ a.navbar__elt:hover:before {
 
 .container__title {
 
-    border-bottom: $mainColor solid 1px;
+    border-bottom: $mainColor solid 3px;
+    border-radius: 2px;
     font-size: $H3;
     font-weight: bold;
     margin-bottom: $litleMarginBottom;
@@ -281,7 +310,7 @@ a.navbar__elt:hover:before {
 .container {
 
 width: 450px;
-max-width: 95%;
+max-width: 90%;
 display: flex;
 flex-direction: column;
 text-align: center;
@@ -312,7 +341,7 @@ box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px
 
 #container-1 {
 
-    margin-bottom: $litleMarginBottom;
+    margin-bottom: $mediumMarginBottom;
     max-width: 95%;
 }
 
@@ -761,3 +790,4 @@ box-shadow: rgba(243, 243, 243, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px
     animation: move_wave 15s linear infinite
 
 }
+
