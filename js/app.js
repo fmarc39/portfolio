@@ -9,11 +9,12 @@ var app = {
     app.overlay2 = document.getElementById("overlay-2-2");
     app.overlay3 = document.getElementById("overlay-3-3");
     app.projects = document.getElementsByClassName('projects');
+    app.responsiveBtn = document.getElementById('responsive')
 
     // Initialisation des functions
     app.handlePopUpEffect();
-
     // Gestion des Listeners
+    app.responsiveBtn.addEventListener('click',app.handleClickEffect)
     for(const projet of app.projects) {
 
       projet.addEventListener('mouseover', app.handleMouseOver);
@@ -64,40 +65,26 @@ var app = {
   }
 
   let callback = function(entries, observer) { 
-  entries.forEach(entry => {
-      if (entry.intersectionRatio > ratio) {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > ratio) {
           entry.target.classList.add('reveal-visible')          
-      }
+        }
   })};
   
   let observer = new IntersectionObserver(callback, options);
-
-  let target = document.querySelectorAll("[class*=reveal-").forEach(function (r) {
-    observer.observe(r)
+  let target = document.querySelectorAll("[class*=reveal-").forEach(function (res) {
+    observer.observe(res)
   })
 
   try {
     observer.observe(target);
   } catch (error) {
     (error)
-  };
+    };
+
   },
 
-
-}
-
-
-
-
-
-
-
-
-
-
-  // responsivemenu
-
-  function responsive() {
+  handleClickEffect: function () {
 
     let header__navbar = document.querySelector('.header__navbar')
     let navBar = document.getElementById("navbar");
@@ -108,7 +95,11 @@ var app = {
       navBar.className = "navbar__elts-box";
       header__navbar.className = "header__navbar"
     } 
-  }
+  },
+
+}
+
+
 // Animated main title letres 
 
 let message = "Développeur Full-Stack JS";
