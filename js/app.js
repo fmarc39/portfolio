@@ -1,63 +1,75 @@
 // CREATION DE LA PARTIE QUI VA AFFICHER L'OVERLAY SECONDAIRE AU MOMENT DU HOVER
 
-const init = () => {
-  console.log('ok')
-}
+var app = {
+  init: () => {
 
-const projectElts = document.getElementById("container-projects")
-const overlay1 = document.getElementById("overlay-1-1")
-const overlay2 = document.getElementById("overlay-2-2")
-const overlay3 = document.getElementById("overlay-3-3") 
+    // Ciblage du DOM
+    app.projectElts = document.getElementById("container-projects");
+    app.overlay1 = document.getElementById("overlay-1-1");
+    app.overlay2 = document.getElementById("overlay-2-2");
+    app.overlay3 = document.getElementById("overlay-3-3");
+    app.projects = document.getElementsByClassName('projects');
 
-projectElts.addEventListener("mouseover", function (event) {
-  let targetElt = event.target
+    // Initialisation des functions
+    app.handlePopUpEffect();
 
-  if(targetElt.id == "overlay-1") {
-    overlay1.classList.remove('hiden') 
-  }
+    // Gestion des Listeners
+    for(const projet of app.projects) {
 
-  if(targetElt.id == "overlay-2") {
-    overlay2.classList.remove('hiden')
-  }
+      projet.addEventListener('mouseover', app.handleMouseOver);
+      projet.addEventListener('mouseleave', app.handleMouseLeave);
+    }
+  },
 
-  if(targetElt.id == "overlay-3") {
-    overlay3.classList.remove('hiden')    
-  }
-})
+  handleMouseOver: function (event) {
+    switch (event.target.id) {
+      case 'overlay-1':
+        app.overlay1.classList.remove('hiden');
+        break;
+      case 'overlay-2':
+        app.overlay2.classList.remove('hiden');
+        break;
+      case 'overlay-3':
+        app.overlay3.classList.remove('hiden');
+        break;
+      default:
+        break;
+    }
+  },
 
-function mouseleave1() {
+  handleMouseLeave: function (event) {
+    console.log(event.target.id)
+    switch (event.target.id) {
+      case 'project-1':
+        app.overlay1.classList.add('hiden');
+        break;
+      case 'project-2':
+        app.overlay2.classList.add('hiden');
+        break;
+      case 'project-3':
+        app.overlay3.classList.add('hiden');
+        break;
+      default:
+        break;
+    }
+  },
 
-  overlay1.classList.add('hiden') 
-}
+  handlePopUpEffect: function () {
 
-function mouseleave2() {
-
-  overlay2.classList.add('hiden')
-}
-
-function mouseleave3() {
-
-  overlay3.classList.add('hiden')
-}
-
-// CREATION DE LA SECTION QUI VA PERMETTRE D'OBERSVER LA SCROLL DE LA PAGE ET DE FAIRE APPARAITRE LES EFFETS 
-
-const ratio = 0.1
-const options = {
+    const ratio = 0.1;
+    const options = {
     root: null,
     rootMargin: '0px',
     threshold: ratio
   }
 
-let callback = function(entries, observer) { 
+  let callback = function(entries, observer) { 
   entries.forEach(entry => {
-
       if (entry.intersectionRatio > ratio) {
           entry.target.classList.add('reveal-visible')          
       }
-  }
-)
-  }
+  })};
+  
   let observer = new IntersectionObserver(callback, options);
 
   let target = document.querySelectorAll("[class*=reveal-").forEach(function (r) {
@@ -69,6 +81,19 @@ let callback = function(entries, observer) {
   } catch (error) {
     (error)
   };
+  },
+
+
+}
+
+
+
+
+
+
+
+
+
 
   // responsivemenu
 
@@ -101,4 +126,4 @@ function textFunc() {
 }
 timer1 = setInterval("textFunc()", 100);
 
-window.addEventListener("load", init);
+window.addEventListener("load", app.init);
