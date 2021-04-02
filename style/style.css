@@ -24,6 +24,7 @@ body {
   font-size: 1.1rem;
   margin-top: 2.5rem;
   min-height: 100vh;
+  width: 100%;
   color: white;
 }
 
@@ -64,6 +65,12 @@ body {
   background-color: white;
   border-radius: 50%;
   padding: 0.6rem;
+}
+
+.navbar__logo.animated {
+  height: 5rem;
+  -webkit-animation: rotate 2s infinite;
+          animation: rotate 2s infinite;
 }
 
 .footer-logo {
@@ -764,6 +771,28 @@ a.navbar__elt:hover:before {
   100% {
     -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
             transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
   }
 }
 
