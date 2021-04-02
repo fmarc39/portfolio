@@ -121,9 +121,13 @@ var app = {
   
   app.timer1 = setInterval("app.textFunc()", 100);   
   },
+};
 
-}
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+    console.log(1)
+  } else {
+    app.init();
+  }
+};
 
-// Appel de la fonction init quand le DOM à finis de charger
-if(document.readyState === 'loading') {console.log('ok')}
-window.addEventListener("DOMContentLoaded", app.init);
