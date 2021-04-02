@@ -95,7 +95,7 @@ a.navbar__elt:before {
   content: "";
   position: absolute;
   width: 0;
-  height: 4px;
+  height: 2px;
   bottom: -5px;
   left: 0;
   border-radius: 5px;
@@ -156,7 +156,7 @@ a.navbar__elt:hover:before {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #94C7EF;
+  background-color: white;
   -webkit-transition: all .3s;
   transition: all .3s;
   border-radius: 30px;
@@ -290,8 +290,7 @@ a.navbar__elt:hover:before {
 }
 
 .container__title {
-  border-bottom: #0052B4 solid 3px;
-  border-radius: 2px;
+  border-bottom: #0052B4 solid 1px;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;

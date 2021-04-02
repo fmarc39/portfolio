@@ -1,18 +1,26 @@
-// CREATION DE LA PARTIE QUI VA AFFICHER L'OVERLAY SECONDAIRE AU MOMENT DU HOVER
-
 var app = {
   init: () => {
 
-    // Ciblage du DOM
+    // Ciblage des éléments du DOM
     app.projectElts = document.getElementById("container-projects");
     app.overlay1 = document.getElementById("overlay-1-1");
     app.overlay2 = document.getElementById("overlay-2-2");
     app.overlay3 = document.getElementById("overlay-3-3");
     app.projects = document.getElementsByClassName('projects');
-    app.responsiveBtn = document.getElementById('responsive')
+    app.responsiveBtn = document.getElementById('responsive');
+    app.header__navbar = document.querySelector('.header__navbar')
+    app.navBar = document.getElementById("navbar");
+    app.messageLabel = document.getElementById("messageLabel");
+
+    // Variables globales
+    app.message = "Développeur Full-Stack JS";
+    app.msgCount = 0;
+    app.timer1;
 
     // Initialisation des functions
     app.handlePopUpEffect();
+    app.mainTitleAnimation();
+    
     // Gestion des Listeners
     app.responsiveBtn.addEventListener('click',app.handleClickEffect)
     for(const projet of app.projects) {
@@ -86,35 +94,31 @@ var app = {
 
   handleClickEffect: function () {
 
-    let header__navbar = document.querySelector('.header__navbar')
-    let navBar = document.getElementById("navbar");
-    if (navBar.className === "navbar__elts-box") {
-      navBar.className += " responsive";
-      header__navbar.className += " clicked"
+    if (app.navBar.className === "navbar__elts-box") {
+      app.navBar.className += " responsive";
+      app.header__navbar.className += " clicked"
     } else {
-      navBar.className = "navbar__elts-box";
-      header__navbar.className = "header__navbar"
+      app.navBar.className = "navbar__elts-box";
+      app.header__navbar.className = "header__navbar"
     } 
+  },
+
+  textFunc: function () {
+
+    app.messageLabel.innerHTML = app.message.substring(0, app.msgCount);
+    if (app.msgCount == app.message.length) {
+      clearInterval(app.timer1);   
+    } else {
+        app.msgCount++;
+    }
+  },
+
+  mainTitleAnimation: function () {
+  
+  app.timer1 = setInterval("app.textFunc()", 100);   
   },
 
 }
 
-
-// Animated main title letres 
-
-let message = "Développeur Full-Stack JS";
-let msgCount = 0;
-let timer1;
-let messageLabel = document.getElementById("messageLabel");
-
-function textFunc() {
-  messageLabel.innerHTML = message.substring(0, msgCount);
-  if (msgCount == message.length) {
-    clearInterval(timer1);   
-  } else {
-      msgCount++;
-  }
-}
-timer1 = setInterval("textFunc()", 100);
 
 window.addEventListener("load", app.init);
