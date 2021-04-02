@@ -657,7 +657,7 @@ a.navbar__elt:hover:before {
   .hiden-nav {
     display: block;
   }
-  .navbar__elts-box.responsive li {
+  .navbar__elts-box.responsive li:not(:first-child) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -665,6 +665,8 @@ a.navbar__elt:hover:before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-animation: opacity 1s;
+            animation: opacity 1s;
   }
   .navbar__elts-box.responsive:not(:first-child) {
     display: -webkit-box;
@@ -747,6 +749,38 @@ a.navbar__elt:hover:before {
   100% {
     -webkit-transform: translateX(-50%) translateZ(0) scaleY(1);
             transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
