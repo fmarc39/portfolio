@@ -13,8 +13,7 @@ var app = {
     app.navBar = document.getElementById("navbar");
     app.messageLabel = document.getElementById("messageLabel");
     app.headerDiv = document.getElementById("header");
-    app.loadingScreen = document.getElementById("loading")
-
+    app.loadingScreen = document.getElementById("loading");
 
     // Variables globales
     app.message = "Développeur Full-Stack JS";
@@ -129,12 +128,14 @@ var app = {
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
+    app.init();
     app.loadingScreen.classList.remove('hiden');
     app.headerDiv.classList.add('hiden');
   } else {
+    app.init();
     app.loadingScreen.classList.add('hiden');
     app.headerDiv.classList.remove('hiden');
-    app.init();
+    
   }
 };
 
