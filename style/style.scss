@@ -52,6 +52,15 @@ body {
     color: white;
 }
 
+.loading {
+    z-index: 9999;
+    height: 100vh;
+    background-color: $secondColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .presentation__main-title {
 
     font-size: $H1;
@@ -102,6 +111,7 @@ body {
     transition: s height ease-in-out;
 
 }
+
 
 .header__navbar.clicked {
 

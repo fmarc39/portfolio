@@ -12,6 +12,8 @@ var app = {
     app.header__navbar = document.querySelector('.header__navbar')
     app.navBar = document.getElementById("navbar");
     app.messageLabel = document.getElementById("messageLabel");
+    app.headerDiv = document.getElementById("header");
+    app.loadingScreen = document.getElementById("loading")
 
 
     // Variables globales
@@ -123,11 +125,17 @@ var app = {
   },
 };
 
+// Gestion de l'affichage du DOM au loading de la page 
+
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
-    console.log(1)
+    app.loadingScreen.classList.remove('hiden');
+    app.headerDiv.classList.add('hiden');
   } else {
+    app.loadingScreen.classList.add('hiden');
+    app.headerDiv.classList.remove('hiden');
     app.init();
   }
 };
+
 
