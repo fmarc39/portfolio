@@ -8,9 +8,11 @@ var app = {
     app.overlay3 = document.getElementById("overlay-3-3");
     app.projects = document.getElementsByClassName('projects');
     app.responsiveBtn = document.getElementById('responsive');
+    app.responsiveBtnStyle = document.getElementById('fa-style');
     app.header__navbar = document.querySelector('.header__navbar')
     app.navBar = document.getElementById("navbar");
     app.messageLabel = document.getElementById("messageLabel");
+
 
     // Variables globales
     app.message = "Développeur Full-Stack JS";
@@ -96,10 +98,12 @@ var app = {
 
     if (app.navBar.className === "navbar__elts-box") {
       app.navBar.className += " responsive";
+      app.responsiveBtnStyle.className = 'fa fa-times'
       app.header__navbar.className += " clicked"
     } else {
       app.navBar.className = "navbar__elts-box";
-      app.header__navbar.className = "header__navbar"
+      app.responsiveBtnStyle.className = 'fa fa-bars';
+      app.header__navbar.className = "header__navbar";
     } 
   },
 
@@ -120,5 +124,6 @@ var app = {
 
 }
 
-
-window.addEventListener("load", app.init);
+// Appel de la fonction init quand le DOM à finis de charger
+if(document.readyState === 'loading') {console.log('ok')}
+window.addEventListener("DOMContentLoaded", app.init);
