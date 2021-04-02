@@ -128,10 +128,12 @@ var app = {
 
 document.onreadystatechange = function() {
   if (document.readyState !== "complete") {
+    console.log('loading')
     app.init();
     app.loadingScreen.classList.remove('hiden');
     app.headerDiv.classList.add('hiden');
   } else {
+    console.log('loaded')
     app.init();
     app.loadingScreen.classList.add('hiden');
     app.headerDiv.classList.remove('hiden');
